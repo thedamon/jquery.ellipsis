@@ -28,7 +28,8 @@
       defaults = {
         lines: 'auto',
         ellipClass: 'ellip',
-        responsive: false
+        responsive: false,
+        outerHeight: false
       };
 
   /**
@@ -81,6 +82,9 @@
       }
 
       contHeight = base.$cont.height();
+      if (base.opts.outerHeight){
+        contHeight = base.$cont.outerHeight();
+      }
 
       // if they only want to ellipsis the overflow
       // then do nothing if there is no overflow      
